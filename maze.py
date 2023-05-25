@@ -1,5 +1,4 @@
 import random
-
 import readchar
 import os
 
@@ -29,21 +28,6 @@ while not end_game:
     for coordinate_y in range(MAP_H):
         print("|", end="")
         for coordinate_x in range(MAP_W):
-
-            char_to_draw = " "
-            object_in_cell = None
-            tail_in_cell = None
-
-            for map_object in map_objects:
-                if map_object[pos_x] == coordinate_x and map_object[pos_y] == coordinate_y:
-                    char_to_draw = "*"
-                    object_in_cell = map_object
-
-            for tail_piece in tail:
-                if tail_piece[pos_x] == coordinate_x and tail_piece[pos_y] == coordinate_y:
-                    char_to_draw = "@"
-                    tail_in_cell = tail_piece
-
 
             if my_pos[pos_x] == coordinate_x and my_pos[pos_y] == coordinate_y:
                 char_to_draw = "@"
